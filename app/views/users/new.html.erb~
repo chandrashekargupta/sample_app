@@ -1,0 +1,51 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+<!--<p>Find me in app/views/users/new.html.erb</p>-->
+
+<!--<div class ="row">
+  <div class="span6 offset3">
+    <%= form_for(@user)  do |f| %>
+ <%= render 'shared/error_messages' %>
+    
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    
+    <%= f.submit "Create my account ", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>-->
+
+<form accept-charset="UTF-8" action="/users" class="new_user"
+      id="new_user" method="post">
+  <%= render 'shared/error_messages' %>
+
+  <label for="user_name">Name</label>
+  <input id="user_name" name="user[name]" size="10" type="text" />
+
+  <label for="user_email">Email</label>
+  <input id="user_email" name="user[email]" size="10" type="text" />
+
+  <label for="user_password">Password</label>
+  <input id="user_password" name="user[password]" size="10" type="password" />
+
+ <label for="user_password_confirmation">Confirmation</label>
+ <input id="user_password_confirmation"
+		 name="user[password_confirmation]" size="10" type="password" />
+
+  <input class="btn btn-large btn-primary" name="commit" type="submit"
+	 value="Create my account" />
+</form>
+
+
+
+
+
